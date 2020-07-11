@@ -7,12 +7,13 @@ import {
 
 import { Provider } from 'react-redux'
 import { store } from './state/store'
+import { MedicineItem } from './components/item_medicine';
 
 const App = () => {
   return (
     <Provider store={store}>
       <SafeAreaView>
-        <Text>MedShelf</Text>
+        <MedicineItem></MedicineItem>
       </SafeAreaView>
     </Provider>
   );
