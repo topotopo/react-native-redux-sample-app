@@ -8,24 +8,24 @@ export enum MEDICINE_LIST_ACTION_TYPES {
     SORT_MEDICINE = 'SORT_MED'
 }
 
-export const addMedicine = (medicine: Medicine): AddMedicineAction => (
-    {
+export function addMedicine(medicine: Medicine): AddMedicineAction {
+    return {
         type: MEDICINE_LIST_ACTION_TYPES.ADD_MEDICINE,
         medicine: medicine
     }
-)
+}
 
-export const delMedicine = (index: number): DelMedicineAction => (
-    {
+export function delMedicine(index: number): DelMedicineAction {
+    return {
         type: MEDICINE_LIST_ACTION_TYPES.DEL_MEDICINE,
         index: index
     }
-)
+}
 
-export const updateMedicine = (index: number, medicine: Medicine): UpdateMedicineAction => (
-    {
+export function updateMedicine(index: number, medicine: Medicine): UpdateMedicineAction {
+    return {
         type: MEDICINE_LIST_ACTION_TYPES.UPDATE_MEDICINE,
         index: index,
         medicine: medicine
     }
-)
+}
