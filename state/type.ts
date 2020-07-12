@@ -1,4 +1,4 @@
-export type Medicine = {
+export interface Medicine {
     index: number,
     name: String,
     brand: String,
@@ -9,19 +9,26 @@ export type Medicine = {
     expired: boolean
 }
 
-export type MedicineListState = Medicine[]
+export interface MedicineListState {
+    medicineList: Medicine[]
+}
 
-export type AddMedicineAction = {
+export interface GetMedicineAction {
     type: String,
     medicine: Medicine
 }
 
-export type DelMedicineAction = {
+export interface AddMedicineAction {
+    type: String,
+    medicine: Medicine
+}
+
+export interface DelMedicineAction {
     type: String,
     index: number
 }
 
-export type UpdateMedicineAction = {
+export interface UpdateMedicineAction {
     type: String,
     index: number,
     medicine: Medicine
@@ -29,6 +36,6 @@ export type UpdateMedicineAction = {
 
 export type MedicineListAction = AddMedicineAction | DelMedicineAction | UpdateMedicineAction
 
-export type AppState = {
+export interface AppState {
     medicineList: MedicineListState
 }
